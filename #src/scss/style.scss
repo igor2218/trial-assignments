@@ -1,0 +1,34 @@
+
+@mixin font($font_name, $file_name, $weight, $style) {
+  @font-face {
+  font-family: $font_name;
+  font-display: swap;
+  src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+  font-weight: #{$weight};
+  font-style: #{$style};
+  }
+}
+@import "fonts";
+@import "variables";
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: $baseFontSize;
+  background: $gray;
+}
+
+a{
+  color:$blue;
+  text-decoration:none;
+  transition: all 0.5s ease;
+  &:hover{
+    text-decoration: underline;
+  }
+}
+@import "blocks/layout";
+@import "blocks/product-card";
+@import "blocks/card-price";
+@import "blocks/card-conditions";
+@import "blocks/buttons";
+@import "blocks/share";

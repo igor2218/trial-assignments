@@ -1,0 +1,32 @@
+/* Price */
+@use 'sass:math';
+.card-price {
+  margin-bottom: 16px;
+
+  &__item {
+      font-size: $baseFontSize + 5;
+      display: inline-block;
+      vertical-align: middle;
+      margin: 8px 0;
+
+    &--old {
+      color: darken( $gray, 54% );
+      margin-right: math.div($space, 2);
+    }
+
+    &--actual {
+      color: darken( $gray, 89% );
+      @include font-bold($baseFontSize + 5);
+      margin-right: $space*1.75;
+    }
+
+    &--promo {
+      @include font-bold($baseFontSize + 5);
+      letter-spacing: 0.8px;
+    }
+  }
+
+  &__title {
+    @include font-light($baseFontSize + 2);
+  }
+}

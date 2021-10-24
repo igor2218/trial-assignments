@@ -1,0 +1,16 @@
+@use 'sass:math';
+@include font("circe_300", "circe_300", "400", "normal");
+@include font("circe_600", "circe_600", "400", "normal");
+@include font("circe_700", "circe_700", "400", "normal");
+@mixin font-light($font-style){
+  font:300 math.div($font-style,1.2) 'Circe Light', sans-serif;
+}
+@mixin font-bold($font-style){
+  font:600 math.div($font-style,1.2) 'Circe Bold', sans-serif;
+}
+@mixin font-xbold($font-style){
+  font:700 math.div($font-style,1.2) 'Circe Extra Bold', sans-serif;
+}
+@mixin font-geometria($font-style){
+  font:400 math.div($font-style,1.2) 'Geometria', sans-serif;
+}

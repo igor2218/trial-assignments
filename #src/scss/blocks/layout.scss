@@ -1,0 +1,8 @@
+.layout {
+  width:100%;
+  max-width:1018px;
+  margin: 0 auto;
+  @include responsive($tablet, 
+  (max-width:650px)
+  );
+}
