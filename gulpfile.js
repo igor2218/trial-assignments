@@ -141,7 +141,7 @@ gulp.task("svgSprite", function () {
       svgSprite({
         mode: {
           stack: {
-            sprite: "../icons/microsoft.svg", //sprite file name
+            sprite: "../icons/icon.svg", //sprite file name
             example: true,
           },
         },
