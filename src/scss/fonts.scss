@@ -1,0 +1,13 @@
+@use 'sass:math';
+@include font("circe_300", "circe_300", "300", "normal");
+@include font("circe_600", "circe_600", "600", "normal");
+@include font("circe_700", "circe_700", "700", "normal");
+@mixin font-light ($baseFontSize) {
+  font:300 $baseFontSize 'Circe Light', sans-serif;
+}
+@mixin font-bold ($baseFontSize) {
+  font:600 $baseFontSize 'Circe Light', sans-serif;
+}
+@mixin font-xbold ($baseFontSize) {
+  font:700 $baseFontSize 'Circe Light', sans-serif;
+}

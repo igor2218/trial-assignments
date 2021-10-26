@@ -10,12 +10,12 @@
       margin: 8px 0;
 
     &--old {
-      color: darken( $gray, 54% );
+      color: darken( $gray, 21% );
       margin-right: math.div($space, 2);
     }
 
     &--actual {
-      color: darken( $gray, 89% );
+      color: darken( $gray, 35% );
       @include font-bold($baseFontSize + 5);
       margin-right: $space*1.75;
     }

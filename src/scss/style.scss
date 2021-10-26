@@ -1,4 +1,4 @@
-
+@use 'sass:math';
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
   font-family: $font_name;
@@ -10,13 +10,15 @@
 }
 @import "fonts";
 @import "variables";
+@import "sprite";
 html {
   font-size: 62.5%;
 }
 body {
-  font-size: $baseFontSize;
+  @include font-light ($baseFontSize);
   background: $gray;
-}
+  margin: 0;
+ }
 
 a{
   color:$blue;
