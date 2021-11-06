@@ -42,7 +42,7 @@ let { src, dest } = require("gulp"),
   webp = require("gulp-webp"),
   webphtml = require("gulp-webp-html"),
   webpcss = require("gulp-webpcss"),
-  spritesmith = require("gulp.spritesmith"),
+  svgSprite = require("gulp-svg-sprite"),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter");
@@ -136,13 +136,21 @@ gulp.task("otf2ttf", function () {
     )
     .pipe(dest(source_folder + "/fonts/"));
 });
-gulp.task('sprite', function () {
-  var spriteData = gulp.src('/iconsprite/*.png').pipe(spritesmith({
-    imgName: './img/sprite.png',
-    cssName: './scss/sprite.scss'
-  }));
-  return spriteData.pipe(gulp.dest('../icons/sprite.svg'))
-})
+gulp.task("svgSprite", function () {
+  return gulp
+    .src([source_folder + "./iconsprite/*.svg"])
+    .pipe(
+      svgSprite({
+        mode: {
+          stack: {
+            sprite: "../icons/icons.svg", //sprite file name
+            example: true,
+          },
+        },
+      })
+    )
+    .pipe(dest(path.build.img));
+});
 function fontsStyle(params) {
   let file_content = fs.readFileSync(source_folder + "/scss/fonts.scss");
   if (file_content == "") {

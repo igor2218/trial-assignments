@@ -8,7 +8,7 @@
   display: inline-block;
   min-width: 340px;
   box-sizing: border-box;
-  @include tablet{min-width:100%, margin-bottom (math.div($space, 2))};
+  @include mobile{min-width:100%; margin-bottom: math.div($space,2)};
 
   &__item {
     margin-bottom: 12px;

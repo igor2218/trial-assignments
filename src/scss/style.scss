@@ -1,4 +1,5 @@
 @use 'sass:math';
+@import "/node_modules/normalize.css/normalize.css";
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
   font-family: $font_name;
@@ -9,15 +10,15 @@
   }
 }
 @import "fonts";
-@import "variables";
 @import "sprite";
+@import "variables";
+
 html {
   font-size: 62.5%;
 }
 body {
   @include font-light ($baseFontSize);
   background: $gray;
-  margin: 0;
  }
 
 a{
