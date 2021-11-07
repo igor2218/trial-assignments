@@ -42,7 +42,7 @@ let { src, dest } = require("gulp"),
   webp = require("gulp-webp"),
   webphtml = require("gulp-webp-html"),
   webpcss = require("gulp-webpcss"),
-  svgSprite = require("gulp-svg-sprite"),
+  spritesmith = require('gulp.spritesmith'),
   ttf2woff = require("gulp-ttf2woff"),
   ttf2woff2 = require("gulp-ttf2woff2"),
   fonter = require("gulp-fonter");
@@ -122,6 +122,16 @@ function images() {
     .pipe(dest(path.build.img))
     .pipe(browsersync.stream());
 }
+
+gulp.task('sprite', function () {
+  var spriteData = gulp.src('src/iconsprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.scss'
+  }));
+  return spriteData.pipe(gulp.dest('trial-assignment/img/sprite'))
+  
+});
+
 function fonts(params) {
   src(path.src.fonts).pipe(ttf2woff()).pipe(dest(path.build.fonts));
   return src(path.src.fonts).pipe(ttf2woff2()).pipe(dest(path.build.fonts));
@@ -136,21 +146,7 @@ gulp.task("otf2ttf", function () {
     )
     .pipe(dest(source_folder + "/fonts/"));
 });
-gulp.task("svgSprite", function () {
-  return gulp
-    .src([source_folder + "./iconsprite/*.svg"])
-    .pipe(
-      svgSprite({
-        mode: {
-          stack: {
-            sprite: "../icons/icons.svg", //sprite file name
-            example: true,
-          },
-        },
-      })
-    )
-    .pipe(dest(path.build.img));
-});
+
 function fontsStyle(params) {
   let file_content = fs.readFileSync(source_folder + "/scss/fonts.scss");
   if (file_content == "") {

@@ -39,23 +39,23 @@
     }
 
     &--vk:after {
-      @include sprite($ico-vk);
+      // @include sprite($ico-vk);
       left: 10px;
     }
 
     &--google:after {
-      @include sprite($ico-google);
+      // @include sprite($ico-google);
       left: 8px;
     }
 
     &--fb:after {
-      @include sprite($ico-fb);
+      // @include sprite($ico-fb);
       top: 8px;
       left: 11px;
     }
 
     &--twitter:after {
-      @include sprite($ico-twitter);
+      // @include sprite($ico-twitter);
       left: 8px;
     }
   }
