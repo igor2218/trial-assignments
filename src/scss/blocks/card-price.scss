@@ -1,5 +1,5 @@
 /* Price */
-@use 'sass:math';
+
 .card-price {
   margin-bottom: 16px;
 
@@ -11,7 +11,7 @@
 
     &--old {
       color: darken( $gray, 21% );
-      margin-right: math.div($space, 2);
+      margin-right: calc($space/2);
     }
 
     &--actual {

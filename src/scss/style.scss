@@ -1,4 +1,3 @@
-@use 'sass:math';
 @import "/node_modules/normalize.css/normalize.css";
 @mixin font($font_name, $file_name, $weight, $style) {
   @font-face {
@@ -9,9 +8,9 @@
   font-style: #{$style};
   }
 }
-@import "fonts";
-@import "sprite";
-@import "variables";
+@import "_fonts";
+@import "_sprite";
+@import "_variables";
 
 html {
   font-size: 62.5%;

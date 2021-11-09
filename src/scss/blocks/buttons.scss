@@ -1,5 +1,5 @@
 /* buttons */
-@use 'sass:math';
+
 .button {
   text-transform: uppercase;
   text-align: center;
@@ -26,7 +26,7 @@
     border: $baseBorder;
     display: inline-block;
     margin-right: $space;
-    @include mobile{margin-right:math.div($space, 2)};
+    @include mobile{margin-right:calc($space/2)};
 
     &:last-child {
       margin-right: 0;

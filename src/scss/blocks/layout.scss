@@ -3,6 +3,6 @@
   max-width:1018px;
   margin: 0 auto;
   @include mobile{
-    min-width: 650px
-}
+    max-width: 650px;
+};
 }
