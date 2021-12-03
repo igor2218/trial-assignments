@@ -4,7 +4,7 @@
   margin-bottom: 16px;
 
   &__item {
-      font-size: $baseFontSize + 5;
+      font-size: $baseFS + 5;
       display: inline-block;
       vertical-align: middle;
       margin: 8px 0;
@@ -16,17 +16,17 @@
 
     &--actual {
       color: darken( $gray, 35% );
-      @include font-bold($baseFontSize + 5);
+      @include font-bold($baseFS + 5);
       margin-right: $space*1.75;
     }
 
     &--promo {
-      @include font-bold($baseFontSize + 5);
+      @include font-bold($baseFS + 5);
       letter-spacing: 0.8px;
     }
   }
 
   &__title {
-    @include font-light($baseFontSize + 2);
+    @include font-light($baseFS + 2);
   }
 }

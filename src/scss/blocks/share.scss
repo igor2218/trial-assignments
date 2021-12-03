@@ -2,12 +2,12 @@
 .share {
   overflow: hidden;
   padding: 30px 0;
-    @include mobile{padding: $space 0};
+    @include desktop{padding: $space 0};
   &__label {
     display: inline-block;
     vertical-align: middle;
     margin-right: $space;
-    @include mobile{display:none};
+    @include desktop{display:none};
   }
 
   &__list {

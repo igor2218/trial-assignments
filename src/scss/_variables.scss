@@ -3,23 +3,8 @@ $desktop: 1288px;
 $tablet: 1018px;
 $mobile: 767px;
 
-// Mixin responsive
-// @mixin responsive($maxWidth, $rules) {
-//   @media only screen and (max-width: $maxWidth) {
-//     $rules
-// }
-// }
+
 @mixin desktop {
-  @media only screen and (min-width: $desktop){
-    @content;
-  }
-}
-@mixin tablet {
-  @media only screen and (min-width: $tablet) and (max-width: $desktop) {
-    @content;
-  }
-}
-@mixin mobile {
   @media only screen and (max-width: $tablet){
     @content;
   }
@@ -33,8 +18,7 @@ $text: #131313;
 $darkGray: #d9d9d9;
 
 //Fonts
-$baseFontSize: 13px;
-$lineHeight: 1.2;
+$baseFS: 13px;
 //Spacers
 $space:20px;
 $baseBorder:2px solid $darkGray;

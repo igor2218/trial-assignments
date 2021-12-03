@@ -12,12 +12,12 @@
   color: $text;
   outline: none;
   transition: all 0.5s ease;
-  @include mobile{width:140px};
+  @include desktop{width:140px};
 }
 
 .buttons {
   padding: $space*1.75 0;
-  @include mobile{padding:$space 0};
+  @include desktop{padding:$space 0};
 
   &__button {
     @extend .button;
@@ -26,7 +26,7 @@
     border: $baseBorder;
     display: inline-block;
     margin-right: $space;
-    @include mobile{margin-right:calc($space/2)};
+    @include desktop{margin-right:calc($space/2)};
 
     &:last-child {
       margin-right: 0;

@@ -6,7 +6,7 @@
   display: inline-block;
   min-width: 340px;
   box-sizing: border-box;
-  @include mobile{min-width:100%; margin-bottom: calc($space/2)};
+  @include desktop{min-width:100%; margin-bottom: calc($space/2)};
 
   &__item {
     margin-bottom: 12px;

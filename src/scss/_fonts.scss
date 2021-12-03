@@ -1,12 +1,12 @@
 @include font("circe_300", "circe_300", "300", "normal");
 @include font("circe_600", "circe_600", "600", "normal");
 @include font("circe_700", "circe_700", "700", "normal");
-@mixin font-light ($baseFontSize) {
-  font:300 #{$baseFontSize}/1.2 'circe_300', sans-serif;  
+@mixin font-light ($baseFS) {
+  font:300 #{$baseFS}/1.2 'circe_300', sans-serif;  
 }
-@mixin font-bold ($baseFontSize) {
-  font:600 #{$baseFontSize}/1.2 'circe_600', sans-serif; 
+@mixin font-bold ($baseFS) {
+  font:600 #{$baseFS}/1.2 'circe_600', sans-serif; 
 }
-@mixin font-xbold ($baseFontSize) {
-  font:700 #{$baseFontSize}/1.2 'circe_700', sans-serif; 
+@mixin font-xbold ($baseFS) {
+  font:700 #{$baseFS}/1.2 'circe_700', sans-serif; 
 }

@@ -5,12 +5,12 @@
   color: $text;
   box-sizing: border-box;
   padding: $space $space $space*2;
-  @include mobile{padding: 25px 20px 25px 0};
+  @include desktop{padding: 25px 20px 25px 0};
 
   &__image {
     float: left;
     width: 33%;
-    @include mobile{width:46%};
+    @include desktop{width:46%};
     img{
       width: 100%;
       height: auto;
@@ -19,16 +19,16 @@
   }
   &__body {
     margin-left: 44%;
-    @include mobile{margin-left: 52%;};
+    @include desktop{margin-left: 52%;};
   }
   &__title {
-    @include font-xbold($baseFontSize + 11);
+    @include font-xbold($baseFS + 11);
     text-transform: uppercase;
     margin: $space*2.5 0 $space;
   }
    &__links {
     margin-bottom: $space*2;
-    @include mobile{margin-bottom:$space;};
+    @include desktop{margin-bottom:$space;};
 
     a {
       margin: 5px $space*1.5 5px 0;
@@ -39,6 +39,6 @@
     line-height: 1.4;
     margin: 0;
     max-width: 450px;
-    @include mobile{max-width:100%;};
+    @include desktop{max-width:100%;};
   }
 }

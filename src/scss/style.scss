@@ -16,7 +16,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  @include font-light ($baseFontSize);
+  @include font-light ($baseFS);
   background: $gray;
  }
 
